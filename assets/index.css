@@ -1,0 +1,45 @@
+body {
+  background-color: #000;
+  background-image: url("header.jpg");
+  background-size: cover;
+  padding-top: 70px;
+}
+
+nav.navbar-default {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+h1 {
+  font-weight: 800;
+  font-size:80px;
+}
+
+.header h1, .header h2, .header p {
+  color: #fff;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size:60px;
+  }
+  body {
+    background-attachment: fixed;
+  }
+}
+
+.white {
+  margin-top:3em;
+  padding-top:3em;
+  background-color: #fff;
+  width:100%;
+}

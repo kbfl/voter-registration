@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>if (window.location.protocol != "https:") window.location.protocol = "https:"</script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>我是方丈選民登記行動</title>
+  <link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/common.css" rel="stylesheet">
+  <link href="assets/app.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/favicon.png" />
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./">我是方丈選民登記行動</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="app.html">立即變方丈填表機<span class="sr-only">(current)</span></a></li>
+          <li><a href="note.html">填表須知</a></li>
+          <li><a href="terms.html">使用條款</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div class="container mainform">
+    <h2 class="sr-only">表格</h2>
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>一、首先，要填中文名，你叫咩名呢?</h3>
+      </div>
+      <div class="clearfix"><br></div>
+      <div class="col-sm-6">
+        <div id="name-zh-form">
+          <div class="form-group has-feedback">
+            <p>本人在香港身分證所載的姓名</p>
+            <label class="control-label" for="name-zh" >中文姓名</label>
+            <input class="form-control name-zh" id="name-zh" type="text" placeholder="王一心" maxlength="5" autocomplete="off">
+          </div>
+        </div>
+        <p>請核對身份證上的中文電碼，如果有錯，請修改。</p>
+        <div class="form-inline name-telecode-form" id="name-telecode">
+          <div class="form-group">
+            <input class="form-control name-telecode" id="name-telecode-0" type="text" maxlength="4" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <input class="form-control name-telecode" style="display: none;" id="name-telecode-1" type="text" maxlength="4" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <input class="form-control name-telecode" style="display: none;" id="name-telecode-2" type="text" maxlength="4" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <input class="form-control name-telecode" style="display: none;" id="name-telecode-3" type="text" maxlength="4" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <input class="form-control name-telecode" style="display: none;" id="name-telecode-4" type="text" maxlength="4" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <input class="form-control name-telecode" style="display: none;" id="name-telecode-5" type="text" maxlength="4" autocomplete="off">
+          </div>
+        </div>
+        <div class="clearfix"><br></div>
+        <button type="button" class="btn btn-default nextButton">下一步</button>
+        <div class="clearfix"><br></div>
+      </div>
+      <div class="col-sm-6">
+        <img src="assets/id-zh.png" class="img-responsive" alt="Illustration">
+      </div>
+    </div>
+    <div class="row" style="display: none;">
+      <div class="col-sm-6">
+        <h3>二、英文名呢?</h3>
+      </div>
+      <div class="clearfix"><br></div>
+      <div class="col-sm-6">
+        <div id="name-en-form">
+          <div class="form-group">
+            <p>本人在香港身分證所載的姓名</p>
+            <label for="name-en-surname">英文姓氏</label>
+            <input class="form-control name-en" id="name-en-surname" type="text" placeholder="WONG" maxlength="28" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="name-en-othername">英文名字</label>
+            <input class="form-control name-en" id="name-en-othername" type="text" placeholder="Yat Sum" maxlength="28" autocomplete="off">
+          </div>
+        </div>
+        <div class="clearfix"><br></div>
+        <button type="button" class="btn btn-default nextButton">下一步</button>
+        <div class="clearfix"><br></div>
+      </div>
+      <div class="col-sm-6">
+        <img src="assets/id-en.png" class="img-responsive" alt="Illustration">
+      </div>
+    </div>
+    <div class="row" style="display: none;">
+      <div class="col-sm-12">
+        <h3>三、 填埋身份證上嘅其他資料吖~</h3>
+        <p>香港身分證號碼</p>
+        <div class="form-inline" id="idcard">
+          <div class="form-group col-sm-1">
+            <label class="sr-only" for="idcard-letters">身份證號碼字母</label>
+            <input class="form-control idcard-letters" id="idcard-letters" type="text" placeholder="K" maxlength="2" autocomplete="off">
+          </div>
+          <div class="form-group col-sm-5 col-md-3">
+            <label class="sr-only" for="idcard-digits">身份證號碼數字</label>
+            <div class="input-group">
+              <input class="form-control idcard-digits" id="idcard-digits" type="text" placeholder="123456" maxlength="6" aria-describedby="idcard-checksum" autocomplete="off">
+              <span class="input-group-addon" id="idcard-checksum">( )</span>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <p>性別</p>
+        <div class="form-inline" id="gender">
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default">
+              <input type="radio" name="gender" id="gender-male" class="radio-button gender-button" autocomplete="off">
+              男
+            </label>
+            <label class="btn btn-default">
+              <input type="radio" name="gender" id="gender-female" class="radio-button gender-button" autocomplete="off">
+              女
+            </label>
+          </div>
+        </div>
+        <div class="clearfix"><br></div>
+        <button type="button" class="btn btn-default nextButton">下一步</button>
+        <div class="clearfix"><br></div>
+      </div>
+    </div>
+    <div class="row lastrow" style="display: none;">
+      <div id="address-form">
+        <div class="col-sm-12">
+          <h3>四、 填住址，本人在香港的住址</h3>
+        </div>
+        <div class="col-sm-4 col-md-2">
+          <div class="form-group">
+            <label for="address-flat">單位/室 Flat/Room</label>
+            <input class="form-control" id="address-flat" type="text" maxlength="5" autocomplete="off">
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-2">
+          <div class="form-group">
+            <label for="address-floor">(字)樓 Floor</label>
+            <input class="form-control" id="address-floor" type="text" maxlength="3" autocomplete="off">
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-2">
+          <div class="form-group">
+            <label for="address-block">座 Block</label>
+            <input class="form-control" id="address-block" type="text" maxlength="3" autocomplete="off">
+          </div>
+        </div>
+        <div class="clearfix"><br></div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="address-line0">樓宇名稱 Name of Building</label>
+            <input class="form-control" id="address-line0" type="text" maxlength="28" autocomplete="off">
+          </div>
+          <div class="clearfix"></div>
+          <div class="form-group">
+            <label for="address-line1">屋邨／鄉村名稱及號數 Name of Estate / Number and Name of Village</label>
+            <input class="form-control" id="address-line1" type="text" maxlength="28" autocomplete="off">
+          </div>
+          <div class="clearfix"></div>
+          <div class="form-group">
+            <label for="address-line2">街道名稱及號數／地段號數 Number and Name of Street / Lot Number</label>
+            <input class="form-control" id="address-line2" type="text" maxlength="28" autocomplete="off">
+          </div>
+          <div class="clearfix"></div>
+          <div class="form-group">
+            <label for="address-line3">地區及分區名稱 Area and District Name</label>
+            <input class="form-control" id="address-line3" type="text" maxlength="28" autocomplete="off">
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"><br></div>
+      <div class="alert alert-warning" role="alert">
+        <p>(a)根據你的住址，選舉登記主任會為你編配所屬的立法會地方選區及區議會選區，成為該些選區的選民。你的住址是指你在香港的唯一或主要居所。該住址資料將提供予相關選區的候選人，以作發放選舉廣告的用途。</p>
+        <p>(b)日後你的住址如有變更，請即以書面通知選舉登記主任。你的住址更改後，你所屬的選區可能要相應作出更改。</p>
+      </div>
+      <div class="clearfix"><br></div>
+      <div class="col-sm-9">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <p class="panel-title">
+              <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                額外聯絡資料及選項 <span class="glyphicon glyphicon-plus"></span>
+              </a>
+            </p>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+              <div id="extra-form">
+                <div class="col-sm-4 col-md-3">
+                  <div class="form-group">
+                    <label for="extra-mobile">手提電話</label>
+                    <input class="form-control" id="extra-mobile" type="text" maxlength="8" autocomplete="off">
+                  </div>
+                </div>
+                <div class="col-sm-4 col-md-3">
+                  <div class="form-group">
+                    <label for="extra-landline">住宅電話</label>
+                    <input class="form-control" id="extra-landline" type="text" maxlength="8" autocomplete="off">
+                  </div>
+                </div>
+                <div class="col-sm-4 col-md-3">
+                  <div class="form-group">
+                    <label for="extra-office">辦公室電話</label>
+                    <input class="form-control" id="extra-office" type="text" maxlength="8" autocomplete="off">
+                  </div>
+                </div>
+                <div class="clearfix"><br></div>
+                <div class="col-sm-8 col-md-6">
+                  <div class="form-group">
+                    <label for="extra-email">電郵</label>
+                    <input class="form-control" id="extra-email" type="text" maxlength="40" autocomplete="off">
+                  </div>
+                </div>
+                <div class="clearfix"><br></div>
+                <div class="col-sm-12 col-md-12">
+                  <p>語言</p>
+                  <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default active">
+                      <input type="radio" name="extra-lang" id="extra-lang-zh" class="radio-button extra-lang" autocomplete="off" checked>
+                      中文
+                    </label>
+                    <label class="btn btn-default">
+                      <input type="radio" name="extra-lang" id="extra-lang-en" class="radio-button extra-lang" autocomplete="off">
+                      English
+                    </label>
+                  </div>
+                </div>
+                <div class="clearfix"><br></div>
+                <div class="col-sm-12 col-md-12">
+                  <p>區議會（第二）功能界別</p>
+                  <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default active">
+                      <input type="radio" name="extra-dc" id="dc-yes" class="radio-button extra-dc" autocomplete="off" checked>
+                      登記為超級區議會選民
+                    </label>
+                    <label class="btn btn-default">
+                      <input type="radio" name="extra-dc" id="dc-no" class="radio-button extra-dc" autocomplete="off">
+                      拒絕成為超級區議會選民
+                    </label>
+                  </div>
+                  <div class="clearfix"><br></div>
+                  <div class="alert alert-warning" role="alert">
+                    <p>(a) 如果你申請登記成為地方選區選民，你可同時申請登記於區議會（第二）功能界別。請你在第 5 部分的適當方格內填上剔號，選擇你是否希望登記為區議會（第二）功能界別的選民。請注意，如果你不填寫第 5 部分，或你的選擇多於一項，本處會當作為你選擇登記為區議會（第二）功能界別的選民。</p>
+                    <p>(b) 如果你是一個已登記的地方選區選民（並未有登記於任何功能界別），而你不希望登記為區議會（第二）功能界別的選民，請在第5部分的適當方格內填上剔號。</p>
+                    <p>(c) 如果你是一個已登記的選民，而你現在希望由其他的功能界別轉換為區議會（第二）功能界別，你必須填寫「功能界別選民及選舉委員會界別分組投票人個人登記／更改
+                      登記資料申請表」的申請表格（ REO-41）。本處並不會根據你在第5部分所填寫的資料轉換你的功能界別。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <button type="button" class="btn btn-default checkButton">下一步 - 核對資料</button>
+        <div class="clearfix"><br></div>
+      </div>
+    </div>
+    <div class="checkout" style="display: none;">
+      <div class="row">
+        <div class="col-sm-9">
+          <h3>五、 核對資料</h3>
+          <div class="alert alert-success" role="alert"><p>請核對資料，並留意表格上的注意事項及聲明。</p></div>
+          <canvas id="output-canvas"></canvas>
+          <img id="source-img" src="reo-1.png" style="display:none;" alt="">
+          <!--<p>請核對以上資料，並留意表格上的注意事項及聲明，然後選擇遞交方式。</p>-->
+        </div>
+        </div>
+      <div class="row">
+        <div class="col-sm-5">
+          <h3>網上遞交</h3>
+          <p>本人謹此聲明表格上所填報詳情均屬真實及正確，及</p>
+          <p>I declare that the particulars entered in this form are true and accurate, and that</p>
+          <p>(a) 上述住址是本人在香港的唯一或主要居所；及</p>
+          <p>The residential address entered above is the address of my only or principal residence in Hong Kong; and</p>
+          <p>(b) 本人符合登記成為地方選區選民的資格﹝附註 5﹞；及</p>
+          I am eligible to be registered as an elector in a geographical constituency (Note 5); and
+          <p>(c) 本人並沒有喪失登記為選民的資格﹝附註 6﹞。</p>
+          <p>I am not subject to any disqualification from registration (Note 6).</p>
+          <p>簽名 Signature :</p>
+          <canvas id="sign-area"></canvas>
+          <p>請先以滑鼠用上方的手寫板在表格上簽名。 (<a href="#" class="resetSign">清除</a>)</p>
+          <p><a class="btn btn-warning" id="downloadButton" download="Completed REO Form.png">1. 下載檔案</a></p>
+          <p><a class="btn btn-default" href="https://www.reo-form.gov.hk/eto/ch/upload_form.jsp" target="_blank">2. 再上載至選舉事務處網站</a></p>
+          <p>下載檔案後，選舉事務處網站會自動開啟。你要選擇<br>上載<code>Completed REO Form.png</code>、<br>選取「我已簽署電子登記表格」、塡寫驗證碼、再按傳送。</p>
+          <p>如你在遞交表格 14 天後，仍未收到選舉事務處的通知，你可致電該處查詢熱線 2891 1001，查詢有關申請的進展。</p>
+        </div>
+        <!--<div class="col-sm-2">
+          <p>或</p>
+        </div>
+        <div class="col-sm-5">
+          <h3>列印寄回</h3>
+          <p><button type="button" class="btn btn-default">列印並寄給選舉事務處</button></p>
+        </div>-->
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7">
+          <h3>此工具在你的電腦上直接產生選民登記表格圖像，我們不會收集你的個人資料。</h3>
+          <h3>Form images are generated locally on your computer, we will not collect your personal data.</h3>
+          <p>你必須提供清晰而正確的資料作選民登記。如你提供不清晰或不正確的資料，可引致你未能成功登記為選民。任何人士如明知或罔顧後果地作出任何虛假或不正確的陳述，或提供屬虛假達關鍵程度或具誤導性達關鍵程度的資料，即屬違法 。</p>
+          <p>You should provide clear and accurate information for voter registration. Unclear or inaccurate information may lead to unsuccessful voter registration. A person who knowingly or recklessly makes any false or incorrect statement or gives information which is materially false or misleading commits an offence under the law.</p>
+          <p><a href="https://github.com/kbfl-campaign/kbfl-campaign.github.io">Fork and review our code on Github.</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
