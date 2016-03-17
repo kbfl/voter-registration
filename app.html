@@ -36,7 +36,7 @@
   </nav>
   <div class="container mainform">
     <h2 class="sr-only">表格</h2>
-    <div class="row">
+    <div class="step current-step row">
       <div class="col-sm-12">
         <h3>一、首先，要填中文名，你叫咩名呢?</h3>
       </div>
@@ -70,15 +70,12 @@
             <input class="form-control name-telecode" style="display: none;" id="name-telecode-5" type="text" maxlength="4" autocomplete="off">
           </div>
         </div>
-        <div class="clearfix"><br></div>
-        <button type="button" class="btn btn-default nextButton">下一步</button>
-        <div class="clearfix"><br></div>
       </div>
       <div class="col-sm-6">
         <img src="assets/id-zh.png" class="img-responsive" alt="Illustration">
       </div>
     </div>
-    <div class="row" style="display: none;">
+    <div class="step row" style="display: none;">
       <div class="col-sm-6">
         <h3>二、英文名呢?</h3>
       </div>
@@ -95,15 +92,12 @@
             <input class="form-control name-en" id="name-en-othername" type="text" placeholder="Yat Sum" maxlength="28" autocomplete="off">
           </div>
         </div>
-        <div class="clearfix"><br></div>
-        <button type="button" class="btn btn-default nextButton">下一步</button>
-        <div class="clearfix"><br></div>
       </div>
       <div class="col-sm-6">
         <img src="assets/id-en.png" class="img-responsive" alt="Illustration">
       </div>
     </div>
-    <div class="row" style="display: none;">
+    <div class="step row" style="display: none;">
       <div class="col-sm-12">
         <h3>三、 填埋身份證上嘅其他資料吖~</h3>
         <p>香港身分證號碼</p>
@@ -133,13 +127,11 @@
               女
             </label>
           </div>
+          <div class="clearfix"><br></div>
         </div>
-        <div class="clearfix"><br></div>
-        <button type="button" class="btn btn-default nextButton">下一步</button>
-        <div class="clearfix"><br></div>
       </div>
     </div>
-    <div class="row lastrow" style="display: none;">
+    <div class="step row" style="display: none;">
       <div id="address-form">
         <div class="col-sm-12">
           <h3>四、 填住址，本人在香港的住址</h3>
@@ -191,86 +183,79 @@
         <p>(b)日後你的住址如有變更，請即以書面通知選舉登記主任。你的住址更改後，你所屬的選區可能要相應作出更改。</p>
       </div>
       <div class="clearfix"><br></div>
-      <div class="col-sm-9">
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingOne">
-            <p class="panel-title">
-              <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                額外聯絡資料及選項 <span class="glyphicon glyphicon-plus"></span>
-              </a>
-            </p>
-          </div>
-          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-            <div class="panel-body">
-              <div id="extra-form">
-                <div class="col-sm-4 col-md-3">
-                  <div class="form-group">
-                    <label for="extra-mobile">手提電話</label>
-                    <input class="form-control" id="extra-mobile" type="text" maxlength="8" autocomplete="off">
-                  </div>
-                </div>
-                <div class="col-sm-4 col-md-3">
-                  <div class="form-group">
-                    <label for="extra-landline">住宅電話</label>
-                    <input class="form-control" id="extra-landline" type="text" maxlength="8" autocomplete="off">
-                  </div>
-                </div>
-                <div class="col-sm-4 col-md-3">
-                  <div class="form-group">
-                    <label for="extra-office">辦公室電話</label>
-                    <input class="form-control" id="extra-office" type="text" maxlength="8" autocomplete="off">
-                  </div>
-                </div>
-                <div class="clearfix"><br></div>
-                <div class="col-sm-8 col-md-6">
-                  <div class="form-group">
-                    <label for="extra-email">電郵</label>
-                    <input class="form-control" id="extra-email" type="text" maxlength="40" autocomplete="off">
-                  </div>
-                </div>
-                <div class="clearfix"><br></div>
-                <div class="col-sm-12 col-md-12">
-                  <p>語言</p>
-                  <div class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-default active">
-                      <input type="radio" name="extra-lang" id="extra-lang-zh" class="radio-button extra-lang" autocomplete="off" checked>
-                      中文
-                    </label>
-                    <label class="btn btn-default">
-                      <input type="radio" name="extra-lang" id="extra-lang-en" class="radio-button extra-lang" autocomplete="off">
-                      English
-                    </label>
-                  </div>
-                </div>
-                <div class="clearfix"><br></div>
-                <div class="col-sm-12 col-md-12">
-                  <p>區議會（第二）功能界別</p>
-                  <div class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-default active">
-                      <input type="radio" name="extra-dc" id="dc-yes" class="radio-button extra-dc" autocomplete="off" checked>
-                      登記為超級區議會選民
-                    </label>
-                    <label class="btn btn-default">
-                      <input type="radio" name="extra-dc" id="dc-no" class="radio-button extra-dc" autocomplete="off">
-                      拒絕成為超級區議會選民
-                    </label>
-                  </div>
-                  <div class="clearfix"><br></div>
-                  <div class="alert alert-warning" role="alert">
-                    <p>(a) 如果你申請登記成為地方選區選民，你可同時申請登記於區議會（第二）功能界別。請你在第 5 部分的適當方格內填上剔號，選擇你是否希望登記為區議會（第二）功能界別的選民。請注意，如果你不填寫第 5 部分，或你的選擇多於一項，本處會當作為你選擇登記為區議會（第二）功能界別的選民。</p>
-                    <p>(b) 如果你是一個已登記的地方選區選民（並未有登記於任何功能界別），而你不希望登記為區議會（第二）功能界別的選民，請在第5部分的適當方格內填上剔號。</p>
-                    <p>(c) 如果你是一個已登記的選民，而你現在希望由其他的功能界別轉換為區議會（第二）功能界別，你必須填寫「功能界別選民及選舉委員會界別分組投票人個人登記／更改
-                      登記資料申請表」的申請表格（ REO-41）。本處並不會根據你在第5部分所填寫的資料轉換你的功能界別。</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+    </div>
+    <div class="step row last-step" style="display: none;">
+      <div id="extra-form">
+        <div class="col-sm-12">
+          <h3>四、 聯絡資料及選項</h3>
+        </div>
+        <div class="col-sm-4 col-md-3">
+          <div class="form-group">
+            <label for="extra-mobile">手提電話</label>
+            <input class="form-control" id="extra-mobile" type="text" maxlength="8" autocomplete="off">
           </div>
         </div>
-      </div>
-      <div class="col-sm-12">
-        <button type="button" class="btn btn-default checkButton">下一步 - 核對資料</button>
+        <div class="col-sm-4 col-md-3">
+          <div class="form-group">
+            <label for="extra-landline">住宅電話</label>
+            <input class="form-control" id="extra-landline" type="text" maxlength="8" autocomplete="off">
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-3">
+          <div class="form-group">
+            <label for="extra-office">辦公室電話</label>
+            <input class="form-control" id="extra-office" type="text" maxlength="8" autocomplete="off">
+          </div>
+        </div>
         <div class="clearfix"><br></div>
+        <div class="col-sm-8 col-md-6">
+          <div class="form-group">
+            <label for="extra-email">電郵</label>
+            <input class="form-control" id="extra-email" type="text" maxlength="40" autocomplete="off">
+          </div>
+        </div>
+        <div class="clearfix"><br></div>
+        <div class="col-sm-12 col-md-12">
+          <p>語言</p>
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default active">
+              <input type="radio" name="extra-lang" id="extra-lang-zh" class="radio-button extra-lang" autocomplete="off" checked>
+              中文
+            </label>
+            <label class="btn btn-default">
+              <input type="radio" name="extra-lang" id="extra-lang-en" class="radio-button extra-lang" autocomplete="off">
+              English
+            </label>
+          </div>
+        </div>
+        <div class="clearfix"><br></div>
+        <div class="col-sm-12 col-md-12">
+          <p>區議會（第二）功能界別</p>
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default active">
+              <input type="radio" name="extra-dc" id="dc-yes" class="radio-button extra-dc" autocomplete="off" checked>
+              登記為超級區議會選民
+            </label>
+            <label class="btn btn-default">
+              <input type="radio" name="extra-dc" id="dc-no" class="radio-button extra-dc" autocomplete="off">
+              拒絕成為超級區議會選民
+            </label>
+          </div>
+          <div class="clearfix"><br></div>
+          <div class="alert alert-warning" role="alert">
+            <p>(a) 如果你申請登記成為地方選區選民，你可同時申請登記於區議會（第二）功能界別。請你在第 5 部分的適當方格內填上剔號，選擇你是否希望登記為區議會（第二）功能界別的選民。請注意，如果你不填寫第 5 部分，或你的選擇多於一項，本處會當作為你選擇登記為區議會（第二）功能界別的選民。</p>
+            <p>(b) 如果你是一個已登記的地方選區選民（並未有登記於任何功能界別），而你不希望登記為區議會（第二）功能界別的選民，請在第5部分的適當方格內填上剔號。</p>
+            <p>(c) 如果你是一個已登記的選民，而你現在希望由其他的功能界別轉換為區議會（第二）功能界別，你必須填寫「功能界別選民及選舉委員會界別分組投票人個人登記／更改
+              登記資料申請表」的申請表格（ REO-41）。本處並不會根據你在第5部分所填寫的資料轉換你的功能界別。</p>
+          </div>
+        </div>
+        <div class="clearfix"><br></div>
+      </div>
+    </div>
+    <div class="step-button row">
+      <div class="col-sm-12">
+        <button type="button" class="btn btn-default nextButton">下一步</button>
+        <button type="button" class="btn btn-default checkButton" style="display: none;">下一步 - 核對資料</button>
       </div>
     </div>
     <div class="checkout" style="display: none;">
