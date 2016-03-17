@@ -202,11 +202,14 @@ voterRegistration.setRadio = function(){
 
 // FIXME: quick and dirty next step button
 voterRegistration.nextStep = function(){
-	var target = $(this).parent().parent();
-	target.hide('fast');
+	var target = $(".current-step");
+	target.hide('fast').removeClass("current-step");
+	target.next().show('fast').addClass("current-step");
 
-	var target = $(this).parent().parent().next();
-	target.show('fast');
+	if ($(".current-step").hasClass("last-step")) {
+		$(".nextButton").hide();
+		$(".checkButton").show();
+	}
 
 	$('html, body').animate({
 		scrollTop: 0
@@ -215,7 +218,8 @@ voterRegistration.nextStep = function(){
 
 // FIXME: quick and dirty generate button
 voterRegistration.generate = function(){
-	$(".lastrow").hide();
+	$(".last-step").hide();
+	$(".step-button").hide();
 	$(".checkout").show();
 
 	$('html, body').animate({
