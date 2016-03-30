@@ -24,9 +24,8 @@ footer {
   border-radius: 0;
 }
 
-
-nav.navbar-default {
-  background-color: #b61606 !important;
+nav.navbar-kbfl {
+  background-color: #D05B5E;
 }
 
 nav.navbar-default li a, nav.navbar-default .navbar-brand {

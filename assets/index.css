@@ -1,21 +1,17 @@
 body {
-  background-color: #000;
-  background-image: url("header.jpg");
-  background-size: cover;
   padding-top: 70px;
+  background-image: url('paper.png');
 }
 
-nav.navbar-default {
-  background-color: rgba(0, 0, 0, 0.5) !important;
+header {
+  text-align: center;
 }
 
 h1 {
-  font-weight: 800;
-  font-size:80px;
-}
-
-.header h1, .header h2, .header p {
-  color: #fff;
+  font-weight: 200;
+  font-size:72px;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
 }
 
 p {
@@ -27,19 +23,8 @@ h2 {
   font-weight: 600;
 }
 
-
 @media (max-width: 768px) {
   h1 {
-    font-size:60px;
+    font-size:42px;
   }
-  body {
-    background-attachment: fixed;
-  }
-}
-
-.white {
-  margin-top:3em;
-  padding-top:3em;
-  background-color: #fff;
-  width:100%;
 }
