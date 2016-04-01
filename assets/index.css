@@ -1,10 +1,11 @@
-body {
+body{
   padding-top: 70px;
   background-image: url('paper.png');
 }
-
-header {
-  text-align: center;
+@media (min-width: 768px) {
+  header {
+    text-align: center;
+  }
 }
 
 h1 {
@@ -12,6 +13,11 @@ h1 {
   font-size:72px;
   margin-top: 8rem;
   margin-bottom: 8rem;
+  color: #666;
+}
+
+.btn-lg {
+  border-radius: 0;
 }
 
 p {
@@ -19,12 +25,44 @@ p {
   font-weight: 300;
 }
 
-h2 {
-  font-weight: 600;
-}
-
 @media (max-width: 768px) {
   h1 {
     font-size:42px;
   }
+}
+
+.footer {
+  margin-bottom: 8rem;
+}
+
+@keyframes animatedEarthMotion {
+  0% {
+  	background-position: 0px 5px, 125px 5px, 0px 5px, 0px 0px;
+  }
+  50% {
+  	background-position: 278px 33px, 125px 5px, 278px 33px, 0px 0px;
+  }
+  100% {
+  	background-position: 0px 5px, 125px 5px, 0px 5px, 0px 0px;
+  }
+}
+@keyframes animatedEarthLayer {
+  0% {
+    background-image: url('earth.png'), url('sun.png'), none, url('track.png');
+  }
+  50% {
+    background-image: none, url('sun.png'), url('earth.png'), url('track.png');
+  }
+  100% {
+    background-image: none, url('sun.png'), url('earth.png'), url('track.png');
+  }
+}
+.year-animate-area	{
+  background-image: url('earth.png'), url('sun.png'), url('earth.png');
+	background-position: 0px 0px, 0px 0px, 0px 0px;
+	background-repeat: no-repeat, no-repeat, no-repeat;
+  animation: animatedEarthMotion 2s cubic-bezier(0.5, 0, 0.5, 1) infinite, animatedEarthLayer 2s step-end infinite;
+  height: 60px;
+  width: 300px;
+  margin:8rem 0;
 }
