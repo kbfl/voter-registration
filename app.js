@@ -222,7 +222,6 @@ voterRegistration.nextStep = function(){
 voterRegistration.generate = function(){
 	if (voterRegistration.data.optin) {
 		$("<img src='https://www.google-analytics.com/collect?v=1&t=event&tid=UA-72771086-1&cid=force-anonymous-client-id&ec=Form&ea=Generate&ni=1'>").appendTo("body");
-		voterRegistration.data.optin=false;
 	}
 	var canvas = voterRegistration.canvas;
 	var context = voterRegistration.canvas.getContext('2d');
