@@ -1,59 +1,97 @@
+/* body */
+body{
+  padding-top: 70px;
+  background-image: url('paper.png');
+}
+
+/* navbar */
+.navbar-brand-logo {
+  position: fixed;
+  top: 0;
+}
+.navbar-brand-text {
+  margin-left: 65px;
+}
+@media (max-width: 768px) {
+  .navbar-brand-text {
+    display: none;
+  }
+}
+
+/* common element */
+p, .control-label {
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 1em;
+}
+.redtape{
+  font-size: 14px;
+  color: #666;
+}
+
+/* idcard control */
 @media (min-width: 768px) {
   .form-inline .form-control.idcard-letters {
     width: 63px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
   }
 }
-
 @media (min-width: 992px) {
   .form-inline .form-control.idcard-letters {
     width: 82px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
   }
 }
-
 @media (min-width: 1200px) {
   .form-inline .form-control.idcard-letters {
     width: 98px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
   }
 }
-
-.form-inline .form-control.idcard-digits {
-  border-radius: 0px;
+.form-inline .form-control.idcard-letters {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
-
 .form-inline .form-control.idcard-digits, .form-inline .form-control.idcard-letters, #idcard-checksum {
   text-align: center;
   letter-spacing: 2px;
   font-family: monospace;
   text-transform: uppercase;
 }
-
-#idcard .form-group {
-  padding-left: 0;
+.form-inline .form-control.idcard-digits {
+  border-radius: 0px;
 }
 
-.name-telecode {
-  width: 5em !important;
+/* step control */
+.next-steps {
+  display: none;
 }
+.prev-steps .nextButton {
+  display: none;
+}
+/*@media (max-width: 768px) {*/
+  .prev-steps {
+    display: none;
+  }
+/*}*/
 
+/* name-zh */
+.form-inline .form-control.name-telecode {
+  width: 5em;
+}
 #name-zh {
   letter-spacing: 0.5em;
   width: 12em;
 }
 
-label {
-  line-height: 1.5em;
-  font-weight: normal;
-}
+/* canvas*/
 canvas {
   border: solid 2px #aaa;
 }
 #output-canvas {
   width: 100%;
   max-width: 100vw;
+}
+
+/* footer */
+footer {
+  margin-top:5em;
+  border-top: #aaa solid 2px;
 }
