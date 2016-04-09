@@ -1,10 +1,10 @@
 $(function () {
   window.setInterval(function () {
-    var t = (Math.floor(Date.now()/1000)-1459353600)/86400;
+    var t = (Math.floor(Date.now()/1000)-1460044800)/86400;
     var formGenerated = (
-      6500+(
+      7500+(
         Math.floor(
-          288/2*(
+          50*(
             t-(
               (Math.sin(2*Math.PI*t))/(2*Math.PI)
             )
