@@ -180,14 +180,31 @@ voterRegistration.setNameZhAndTelecode = function(){
 	var fullcode="";
 	for (var i = 0; i <= 5; i++) {
 		if (i<name.length) {
-			$("#name-telecode-"+i).show().val(voterRegistration.telecode[name.charAt(i)]);
-			fullcode += voterRegistration.telecode[name.charAt(i)];
+			if (typeof voterRegistration.telecode[name.charAt(i)] != 'undefined') {
+				$("#name-telecode-"+i).show().val(voterRegistration.telecode[name.charAt(i)]);
+				fullcode += voterRegistration.telecode[name.charAt(i)];
+			} else {
+				$("#name-telecode-"+i).show().val("????");
+				fullcode += "    ";
+			}
 		}else{
 			$("#name-telecode-"+i).hide().val('');
 		}
 	}
 	voterRegistration.data["telecode"] = fullcode;
 	voterRegistration.data["name-zh"] = name;
+}
+
+voterRegistration.setTelecodeOnly = function(){
+	var fullcode = "";
+	for (var i = 0; i <= 5; i++) {
+		if ($("#name-telecode-"+i).val().match(/\d{4}/)) {
+			fullcode += $("#name-telecode-"+i).val();
+		} else {
+			fullcode += "    ";
+		}
+	}
+	voterRegistration.data["telecode"] = fullcode;
 }
 
 // FIXME: quick and dirty radio button to string
@@ -374,6 +391,9 @@ $("#idcard-letters").on('input', voterRegistration.setIdCheckdigit);
 $("#idcard-digits").on('input', voterRegistration.setIdCheckdigit);
 
 $("#name-zh").on('input', voterRegistration.setNameZhAndTelecode);
+$(".name-telecode").each(function(){
+	$(this).on('input', voterRegistration.setTelecodeOnly);
+});
 
 $(".radio-button").each(function(){
 	$(this).on('change', voterRegistration.setRadio);
