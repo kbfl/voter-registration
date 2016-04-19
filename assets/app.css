@@ -33,6 +33,7 @@ p, .control-label {
 @media (max-width: 992px) {
   .mainform #optin .btn {
     display: block;
+    clear: both;
     border-radius: 4px;
     width: 200px;
   }
