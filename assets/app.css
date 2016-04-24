@@ -29,6 +29,20 @@ p, .control-label {
   color: #666;
 }
 
+/* Responsive button fixes for analytics */
+@media (max-width: 992px) {
+  .mainform #optin .btn {
+    display: block;
+    clear: both;
+    border-radius: 4px;
+    width: 200px;
+  }
+
+  .mainform #optin .btn:nth-child(n+2) {
+    margin-top: 10px;
+  }
+}
+
 /* idcard control */
 @media (min-width: 768px) {
   .form-inline .form-control.idcard-letters {
