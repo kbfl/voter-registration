@@ -4,7 +4,7 @@ $(function () {
     var formGenerated = (
       8500+(
         Math.floor(
-          1160/4*(
+          400*(
             t-(
               (Math.sin(2*Math.PI*t))/(2*Math.PI)
             )
