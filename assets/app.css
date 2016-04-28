@@ -103,6 +103,9 @@ canvas {
   width: 100%;
   max-width: 100vw;
 }
+#sign-area {
+  cursor: url('cursor.png') 8 8, crosshair;
+}
 
 /* footer */
 footer {
