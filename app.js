@@ -32,6 +32,7 @@ voterRegistration.data = {
 	"extra-dc": "✔ ",
 	"extra-lang": "✔ ",
 	"date": (new Date().toJSON().slice(0,10).split("-").join("")),
+	"step": 0,
 };
 
 // text position on canvas
@@ -218,22 +219,55 @@ voterRegistration.setRadio = function(){
 		voterRegistration.data.optin = false;
 		return false;
 	}
-	if ($.inArray(this.id, ["gender-male", "dc-yes", "extra-lang-zh"]) >= 0) {
+	if ($.inArray(this.id, ["gender-male", "dc-yes-new", "dc-yes-exist", "extra-lang-zh"]) >= 0) {
 		voterRegistration.data[this.name] = "✔ ";
 	} else {
 		voterRegistration.data[this.name] = " ✔";
+	}
+	if ($.inArray(this.id, ["dc-fc"]) >= 0) {
+		voterRegistration.data[this.name] = "  ";
 	}
 }
 
 // FIXME: quick and dirty next step button
 voterRegistration.nextStep = function(){
-	var target = $(".current-step");
-	target.removeClass("current-step").addClass("prev-steps");
-	target.next().removeClass("next-steps").addClass("current-step");
+	voterRegistration.data.step++;
+	voterRegistration.setStep(voterRegistration.data.step);
+	return false;
+}
+voterRegistration.setStep = function(step){
+	var target = $(".step-container");
+	target.removeClass("step-current-"+(step-1)).addClass("step-current-"+step);
+
+	var navtarget = $(".step-nav-container");
+	navtarget.removeClass("step-current-"+(step-1)).addClass("step-current-"+step);
+
+	$(".step-nav-1 .nav-content").text(voterRegistration.data["name-zh"]+", "+voterRegistration.data["telecode"]);
+	$(".step-nav-2 .nav-content").text(voterRegistration.data["name-en-surname"]+", "+voterRegistration.data["name-en-othername"]);
+	$(".step-nav-3 .nav-content").text(voterRegistration.data["idcard"]+", "+	$(".gender-btn.active .btn-text").text());
+	$(".step-nav-4 .nav-content").text(
+		voterRegistration.data["address-flat"]+" "+
+		voterRegistration.data["address-floor"]+" "+
+		voterRegistration.data["address-block"]+" "+
+		voterRegistration.data["address-line0"]+" "+
+		voterRegistration.data["address-line1"]+" "+
+		voterRegistration.data["address-line2"]+" "+
+		voterRegistration.data["address-line3"]
+  );
+	$(".step-nav-5 .nav-content").text(
+		voterRegistration.data["extra-landline"]+" "+
+		voterRegistration.data["extra-mobile"]+" "+
+		voterRegistration.data["extra-office"]+" "+
+		voterRegistration.data["extra-email"]+" "+
+		$(".lang-btn.active .btn-text").text()+" "+
+		$(".extra-dc-btn.active .btn-text").text()
+	);
 
 	$('html, body').animate({
 		scrollTop: 0
 	}, 500);
+
+	return false;
 }
 
 // FIXME: quick and dirty generate button
@@ -326,7 +360,6 @@ voterRegistration.initSign = function(){
 voterRegistration.resetSign = function(){
 	var canvas = voterRegistration.signarea;
 	var context = voterRegistration.signarea.getContext('2d');
-	context.clearRect(0, 0, 1000, 1000);
 	context.fillStyle="white";
 	context.fillRect(0, 0, 320, 150);
 	context.fillStyle=null;

@@ -30,7 +30,7 @@ p, .control-label {
 }
 
 /* Responsive button fixes for analytics */
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .mainform #optin .btn {
     display: block;
     clear: both;
@@ -41,6 +41,17 @@ p, .control-label {
   .mainform #optin .btn:nth-child(n+2) {
     margin-top: 10px;
   }
+}
+
+.extra-dc-group>.btn.extra-dc-btn {
+  display: block;
+  clear: both;
+  border-radius: 4px !important;
+  width: 500px;
+}
+
+.extra-dc-group>.btn.extra-dc-btn:nth-child(n+2) {
+  margin-top: 10px;
 }
 
 /* idcard control */
@@ -74,17 +85,28 @@ p, .control-label {
 }
 
 /* step control */
-.next-steps {
+.step-container .step, .step-nav-container .step-nav {
   display: none;
 }
-.prev-steps .nextButton {
-  display: none;
+.step-container.step-current-0 .step-0,
+.step-container.step-current-1 .step-1,
+.step-container.step-current-2 .step-2,
+.step-container.step-current-3 .step-3,
+.step-container.step-current-4 .step-4,
+.step-container.step-current-5 .step-5,
+.step-container.step-current-6 .step-6,
+.step-nav-container.step-current-2 .step-nav:nth-last-child(1n+6),
+.step-nav-container.step-current-3 .step-nav:nth-last-child(1n+5),
+.step-nav-container.step-current-4 .step-nav:nth-last-child(1n+4),
+.step-nav-container.step-current-5 .step-nav:nth-last-child(1n+3),
+.step-nav-container.step-current-6 .step-nav:nth-last-child(1n+2) {
+  display: block;
 }
-/*@media (max-width: 768px) {*/
-  .prev-steps {
-    display: none;
-  }
-/*}*/
+
+.step-nav-container .step-nav ul, .step-nav-container .step-nav ul>li{
+  list-style: none;
+  list-style-type: none;
+}
 
 /* name-zh */
 .form-inline .form-control.name-telecode {
