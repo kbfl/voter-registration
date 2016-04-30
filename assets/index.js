@@ -2,7 +2,7 @@ $(function () {
   window.setInterval(function () {
     var t = (Math.floor(Date.now()/1000)-1461686400)/86400;
     var formGenerated = (
-      8500-150+(
+      8500+(
         Math.floor(
           400*(
             t-(

@@ -129,6 +129,31 @@ canvas {
   cursor: url('cursor.png') 8 8, crosshair;
 }
 
+/* */
+#downloadArea {
+  opacity: 0;
+}
+#downloadArea, .downloadAreaContainer {
+  min-width: 320px;
+  min-height: 200px;
+  max-width: 320px;
+  max-height: 200px;
+}
+.downloadAreaContainer {
+   background-image: url('longpress.png');
+   overflow: hidden;
+ }
+ @media (max-width: 768px) {
+   .downloadButton {
+     display: none;
+   }
+ }
+ @media (min-width: 769px) {
+   .downloadAreaContainer {
+     display: none;
+   }
+ }
+
 /* footer */
 footer {
   margin-top:5em;

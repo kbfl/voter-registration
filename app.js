@@ -387,7 +387,8 @@ voterRegistration.updateImgLink = function(){
 		$("<img src='https://www.google-analytics.com/collect?v=1&t=event&tid=UA-72771086-1&cid=force-anonymous-client-id&ec=Form&ea=Download&ni=1'>").appendTo("body");
 		voterRegistration.data.optin=false;
 	}
-	$("#downloadButton").attr("href",voterRegistration.canvas.toDataURL("image/png"));
+	$("#downloadButton").attr("href", voterRegistration.canvas.toDataURL("image/png"));
+	$("#downloadArea").attr("src", voterRegistration.canvas.toDataURL("image/png"));
 }
 
 // render data string on output canvas
