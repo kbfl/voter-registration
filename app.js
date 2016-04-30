@@ -418,7 +418,7 @@ voterRegistration.simpleBind = function(){
 
 // FIXME: quick and dirty bind for email
 voterRegistration.emailBind = function(){
-	voterRegistration.data["extra-email"] = $("extra-email").val();
+	voterRegistration.data["extra-email"] = $("#extra-email").val();
 }
 
 // MISC
@@ -440,8 +440,11 @@ $("#name-en-form input").each(function(){
 $("#address-form input").each(function(){
 	$(this).on('input', voterRegistration.simpleBind);
 });
-$("#extra-form input.form-control").each(function(){
+$("#extra-form input.phone-control").each(function(){
 	$(this).on('input', voterRegistration.simpleBind);
+});
+$("#extra-form input.email-control").each(function(){
+	$(this).on('input', voterRegistration.emailBind);
 });
 
 $(".nextButton").on('click', voterRegistration.nextStep);
