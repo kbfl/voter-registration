@@ -95,11 +95,13 @@ p, .control-label {
 .step-container.step-current-4 .step-4,
 .step-container.step-current-5 .step-5,
 .step-container.step-current-6 .step-6,
-.step-nav-container.step-current-2 .step-nav:nth-last-child(1n+6),
-.step-nav-container.step-current-3 .step-nav:nth-last-child(1n+5),
-.step-nav-container.step-current-4 .step-nav:nth-last-child(1n+4),
-.step-nav-container.step-current-5 .step-nav:nth-last-child(1n+3),
-.step-nav-container.step-current-6 .step-nav:nth-last-child(1n+2) {
+.step-container.step-current-7 .step-7,
+.step-nav-container.step-current-2 .step-nav:nth-last-child(1n+7),
+.step-nav-container.step-current-3 .step-nav:nth-last-child(1n+6),
+.step-nav-container.step-current-4 .step-nav:nth-last-child(1n+5),
+.step-nav-container.step-current-5 .step-nav:nth-last-child(1n+4),
+.step-nav-container.step-current-6 .step-nav:nth-last-child(1n+3),
+.step-nav-container.step-current-7 .step-nav:nth-last-child(1n+2) {
   display: block;
 }
 

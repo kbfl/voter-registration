@@ -363,7 +363,7 @@ voterRegistration.resetSign = function(){
 	context.fillStyle="white";
 	context.fillRect(0, 0, 320, 150);
 	context.fillStyle=null;
-	context.strokeStyle = 'black';
+	context.strokeStyle = '#c91f37';
 	context.lineWidth = 1;
   var path=new Path2D();
 	path.moveTo(0,102);
